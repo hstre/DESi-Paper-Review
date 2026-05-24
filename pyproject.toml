@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "desi-paper-review"
+version = "0.1.0a0"
+description = "DESi Paper Review: a deterministic, offline reviewer ASSISTANT (never a peer reviewer) built on the desi-governance public API."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Hanns-Steffen Rentschler" },
+]
+keywords = [
+    "paper review",
+    "reviewer assistant",
+    "epistemic governance",
+    "deterministic pipelines",
+    "replay stability",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Operating System :: OS Independent",
+]
+# The review pipeline is offline and deterministic. Its only runtime
+# dependency is the real governance library, whose public API supplies
+# the forbidden-term scan, replay-stable artifacts, and protected-core
+# identity check.
+dependencies = [
+    "desi-governance>=0.1.0a0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+desi-paper-review = "paper_review.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hstre/DESi-Paper-Review"
+Repository = "https://github.com/hstre/DESi-Paper-Review"
+
+[tool.setuptools]
+packages = ["paper_review"]
+include-package-data = true

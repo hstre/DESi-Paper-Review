@@ -1,0 +1,463 @@
+{
+  "claims": [
+    {
+      "category": "novelty_claim",
+      "claim_id": "C001",
+      "section": "Abstract",
+      "text": "We present the first method that solves the long-standing problem of generalization in learning systems."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C002",
+      "section": "Abstract",
+      "text": "Our novel approach generalizes to any task and proves robust under arbitrary conditions."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C003",
+      "section": "Abstract",
+      "text": "We claim significant gains and argue that the method establishes a new standard for the field."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C004",
+      "section": "Introduction",
+      "text": "Earlier approaches struggle to generalize beyond the setting they were designed for."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C005",
+      "section": "Introduction",
+      "text": "We introduce a method that, we argue, solves this difficulty once and for all."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C006",
+      "section": "Introduction",
+      "text": "The idea is novel, and we expect it to prove robust where previous ideas fall short."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C007",
+      "section": "Method",
+      "text": "Our method applies a sequence of transformations to the input and returns a refined representation."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C008",
+      "section": "Method",
+      "text": "The procedure is simple and, we believe, broadly applicable across any domain."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C009",
+      "section": "Results",
+      "text": "Our approach achieves high accuracy and strong performance on a dataset."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C010",
+      "section": "Results",
+      "text": "The method generalizes and remains robust throughout."
+    },
+    {
+      "category": "result_claim",
+      "claim_id": "C011",
+      "section": "Results",
+      "text": "We observe consistent gains in our experiments, and the improvements look significant relative to what one would naively expect."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C012",
+      "section": "Discussion",
+      "text": "The method appears to solve a hard problem and proves effective in the settings we considered."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C013",
+      "section": "Discussion",
+      "text": "We expect it to generalize widely and to remain robust as conditions change."
+    },
+    {
+      "category": "limitation_claim",
+      "claim_id": "C014",
+      "section": "Limitations",
+      "text": "However, the method does not yet handle noisy inputs well, and a careful treatment of failure modes remains future work."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C015",
+      "section": "Conclusion",
+      "text": "We have presented the first approach that solves generalization, stays robust, and proves significant in practice."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C016",
+      "section": "Conclusion",
+      "text": "The method is novel and, we argue, generalizes to any future task."
+    }
+  ],
+  "evidence_gaps": [
+    {
+      "claim_id": "C001",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Abstract"
+    },
+    {
+      "claim_id": "C002",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Abstract"
+    },
+    {
+      "claim_id": "C003",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Abstract"
+    },
+    {
+      "claim_id": "C004",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Introduction"
+    },
+    {
+      "claim_id": "C005",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Introduction"
+    },
+    {
+      "claim_id": "C006",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Introduction"
+    },
+    {
+      "claim_id": "C008",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Method"
+    },
+    {
+      "claim_id": "C010",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Results"
+    },
+    {
+      "claim_id": "C011",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Results"
+    },
+    {
+      "claim_id": "C012",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Discussion"
+    },
+    {
+      "claim_id": "C013",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Discussion"
+    },
+    {
+      "claim_id": "C015",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Conclusion"
+    },
+    {
+      "claim_id": "C016",
+      "missing": "inline_support",
+      "note": "Strong claim presented without inline data, a citation, or a table/figure reference.",
+      "section": "Conclusion"
+    }
+  ],
+  "governance": {
+    "audit_framing": "DESi performs an internal consistency and overreach audit of its own documentation. DESi does not validate itself.",
+    "core_identity": 1.0,
+    "disclaimer": "This artifact assists human review only. It never accepts, rejects, or validates a paper, never replaces a human reviewer, and never determines truth or guarantees correctness.",
+    "forbidden_term_hits": [],
+    "library": "desi-governance",
+    "mode": {
+      "allow_live_llm_calls": false,
+      "live_calls_enabled": false,
+      "offline_mode": true
+    }
+  },
+  "overclaims": [
+    {
+      "category": "novelty_claim",
+      "claim_id": "C001",
+      "section": "Abstract",
+      "terms": [
+        "first",
+        "generalizes",
+        "solves"
+      ],
+      "text": "We present the first method that solves the long-standing problem of generalization in learning systems."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C002",
+      "section": "Abstract",
+      "terms": [
+        "novel",
+        "robust",
+        "generalizes",
+        "proves"
+      ],
+      "text": "Our novel approach generalizes to any task and proves robust under arbitrary conditions."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C003",
+      "section": "Abstract",
+      "terms": [
+        "significant"
+      ],
+      "text": "We claim significant gains and argue that the method establishes a new standard for the field."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C004",
+      "section": "Introduction",
+      "terms": [
+        "generalizes"
+      ],
+      "text": "Earlier approaches struggle to generalize beyond the setting they were designed for."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C005",
+      "section": "Introduction",
+      "terms": [
+        "solves"
+      ],
+      "text": "We introduce a method that, we argue, solves this difficulty once and for all."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C006",
+      "section": "Introduction",
+      "terms": [
+        "novel",
+        "robust",
+        "proves"
+      ],
+      "text": "The idea is novel, and we expect it to prove robust where previous ideas fall short."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C010",
+      "section": "Results",
+      "terms": [
+        "robust",
+        "generalizes"
+      ],
+      "text": "The method generalizes and remains robust throughout."
+    },
+    {
+      "category": "result_claim",
+      "claim_id": "C011",
+      "section": "Results",
+      "terms": [
+        "significant"
+      ],
+      "text": "We observe consistent gains in our experiments, and the improvements look significant relative to what one would naively expect."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C012",
+      "section": "Discussion",
+      "terms": [
+        "solves",
+        "proves"
+      ],
+      "text": "The method appears to solve a hard problem and proves effective in the settings we considered."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C013",
+      "section": "Discussion",
+      "terms": [
+        "robust",
+        "generalizes"
+      ],
+      "text": "We expect it to generalize widely and to remain robust as conditions change."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C015",
+      "section": "Conclusion",
+      "terms": [
+        "first",
+        "robust",
+        "significant",
+        "generalizes",
+        "solves",
+        "proves"
+      ],
+      "text": "We have presented the first approach that solves generalization, stays robust, and proves significant in practice."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C016",
+      "section": "Conclusion",
+      "terms": [
+        "novel",
+        "generalizes"
+      ],
+      "text": "The method is novel and, we argue, generalizes to any future task."
+    }
+  ],
+  "paper_title": "A Novel Method That Solves Generalization and Proves Robust Across Tasks",
+  "replay_hash": "26c7a0ef769634bff2b5ed1dbb161e9ae993a4b3f8b67c920e2601cc967c93f3",
+  "reproducibility_risks": [
+    {
+      "detail": "No link or statement indicating the source code is available for reproduction.",
+      "risk_type": "missing_code"
+    },
+    {
+      "detail": "No statement that the underlying data are available for inspection.",
+      "risk_type": "missing_data"
+    },
+    {
+      "detail": "No baseline or comparison against prior work is described.",
+      "risk_type": "missing_baselines"
+    },
+    {
+      "detail": "No hyperparameters, seeds, or training/configuration details are reported.",
+      "risk_type": "missing_parameters"
+    },
+    {
+      "detail": "A dataset is mentioned but not identified by name, size, or construction.",
+      "risk_type": "unclear_dataset"
+    },
+    {
+      "detail": "Performance metrics are reported without a described measurement protocol or variance/significance.",
+      "risk_type": "unsupported_metrics"
+    }
+  ],
+  "reviewer_questions": [
+    "Claim C001 uses strong language (first, generalizes, solves). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C002 uses strong language (novel, robust, generalizes, proves). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C003 uses strong language (significant). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C004 uses strong language (generalizes). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C005 uses strong language (solves). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C006 uses strong language (novel, robust, proves). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C010 uses strong language (robust, generalizes). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C011 uses strong language (significant). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C012 uses strong language (solves, proves). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C013 uses strong language (robust, generalizes). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C015 uses strong language (first, robust, significant, generalizes, solves, proves). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "Claim C016 uses strong language (novel, generalizes). Does the evidence justify it, or should the authors soften or substantiate the wording?",
+    "What specific evidence supports claim C001? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C002? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C003? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C004? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C005? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C006? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C008? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C010? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C011? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C012? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C013? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C015? It currently lacks inline data, a citation, or a table/figure reference.",
+    "What specific evidence supports claim C016? It currently lacks inline data, a citation, or a table/figure reference.",
+    "Can the authors provide a link to the source code required to reproduce the reported results?",
+    "Are the underlying data available for independent inspection?",
+    "Which baselines were used, and how does the method compare against prior work?",
+    "What exact hyperparameters, seeds, and training/configuration settings were used?",
+    "Which dataset (name, size, and splits) was used, and how was it constructed?",
+    "How were the reported metrics computed (evaluation protocol, test set, and variance or significance)?"
+  ],
+  "schema_version": "1.0",
+  "tool": "desi-paper-review",
+  "tool_version": "0.1.0a0",
+  "unsupported_claims": [
+    {
+      "category": "novelty_claim",
+      "claim_id": "C001",
+      "section": "Abstract",
+      "text": "We present the first method that solves the long-standing problem of generalization in learning systems."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C002",
+      "section": "Abstract",
+      "text": "Our novel approach generalizes to any task and proves robust under arbitrary conditions."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C003",
+      "section": "Abstract",
+      "text": "We claim significant gains and argue that the method establishes a new standard for the field."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C004",
+      "section": "Introduction",
+      "text": "Earlier approaches struggle to generalize beyond the setting they were designed for."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C005",
+      "section": "Introduction",
+      "text": "We introduce a method that, we argue, solves this difficulty once and for all."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C006",
+      "section": "Introduction",
+      "text": "The idea is novel, and we expect it to prove robust where previous ideas fall short."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C008",
+      "section": "Method",
+      "text": "The procedure is simple and, we believe, broadly applicable across any domain."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C010",
+      "section": "Results",
+      "text": "The method generalizes and remains robust throughout."
+    },
+    {
+      "category": "result_claim",
+      "claim_id": "C011",
+      "section": "Results",
+      "text": "We observe consistent gains in our experiments, and the improvements look significant relative to what one would naively expect."
+    },
+    {
+      "category": "method_claim",
+      "claim_id": "C012",
+      "section": "Discussion",
+      "text": "The method appears to solve a hard problem and proves effective in the settings we considered."
+    },
+    {
+      "category": "generalization_claim",
+      "claim_id": "C013",
+      "section": "Discussion",
+      "text": "We expect it to generalize widely and to remain robust as conditions change."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C015",
+      "section": "Conclusion",
+      "text": "We have presented the first approach that solves generalization, stays robust, and proves significant in practice."
+    },
+    {
+      "category": "novelty_claim",
+      "claim_id": "C016",
+      "section": "Conclusion",
+      "text": "The method is novel and, we argue, generalizes to any future task."
+    }
+  ],
+  "verdict": "REVIEW_ASSISTANCE_ONLY"
+}

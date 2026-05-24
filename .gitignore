@@ -1,0 +1,27 @@
+# Python build / cache artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets - NEVER commit. The example config is keyless and IS tracked;
+# everything below may contain credentials and must stay out of git.
+config/paper_review.local.ini
+.env
+.env.*
+*.key
+secrets/
+
+# OS noise
+.DS_Store
+Thumbs.db
