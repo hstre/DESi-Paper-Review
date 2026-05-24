@@ -26,12 +26,9 @@ jobs:
 
   python:
     # The Python pipeline/CLI tests need the real desi-governance library,
-    # which is NOT on PyPI - it lives in the hstre/DESi repository. We
-    # check it out and install it editable.
-    #
-    # Cross-repo checkout of a PRIVATE repo needs a token with read access
-    # to hstre/DESi, stored as the repository secret DESI_REPO_TOKEN. If
-    # hstre/DESi is public, the default GITHUB_TOKEN already suffices.
+    # which is NOT on PyPI - it lives in the (public) hstre/DESi repo. We
+    # check it out and install it editable. hstre/DESi is public, so the
+    # default GITHUB_TOKEN can read it; no extra secret is required.
     name: Python (pipeline + CLI)
     runs-on: ubuntu-latest
     steps:
@@ -44,7 +41,6 @@ jobs:
         with:
           repository: hstre/DESi
           path: _desi
-          token: ${{ secrets.DESI_REPO_TOKEN || github.token }}
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
