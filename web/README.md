@@ -32,6 +32,16 @@ real `replay_hash` and `canonical_json`, and refuses to emit anything if
 
 ## Run it
 
+Quickest path (from the repo root):
+
+```bash
+make dev      # starts the DESi service + web UI together; Ctrl-C stops both
+make check    # full health gate: service + python doctor + go self-check
+make test     # run Python and Go tests
+```
+
+Or manually:
+
 ```bash
 # 1. install the governance library and start the DESi microservice
 pip install -e ..          # installs desi-paper-review (and pulls desi-governance)
