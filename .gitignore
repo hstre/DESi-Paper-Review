@@ -22,6 +22,11 @@ config/paper_review.local.ini
 *.key
 secrets/
 
+# Go build artifacts
+web/dpr-web
+*.test
+*.out
+
 # OS noise
 .DS_Store
 Thumbs.db

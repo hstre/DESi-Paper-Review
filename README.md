@@ -73,6 +73,15 @@ See [`examples/`](examples/) for `sample_paper.md` and the generated
   config is keyless; `config/paper_review.local.ini`, `.env`, `*.key`, and
   `secrets/` are gitignored.
 
+## Browser UI (Go)
+
+An optional browser front-end with a deterministic **Go** re-implementation
+of the pipeline lives in [`web/`](web/). It keeps the governance honest by
+calling the real `desi-governance` library through a small Python
+microservice ([`service/desi_service.py`](service/desi_service.py)) for
+`forbidden_hits`, `replay_hash`, `canonical_json`, and the `core_identity`
+gate — nothing is faked. See [web/README.md](web/README.md).
+
 ## Install
 
 See [INSTALL.md](INSTALL.md).
