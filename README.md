@@ -1,5 +1,7 @@
 # DESi Paper Review
 
+[![CI](https://github.com/hstre/DESi-Paper-Review/actions/workflows/ci.yml/badge.svg)](https://github.com/hstre/DESi-Paper-Review/actions/workflows/ci.yml)
+
 A deterministic, offline **reviewer ASSISTANT** built on the
 [`desi-governance`](https://github.com/hstre/DESi) library.
 
