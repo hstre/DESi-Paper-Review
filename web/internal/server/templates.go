@@ -157,6 +157,18 @@ const pageTemplate = `<!DOCTYPE html>
 
   <div class="panel">
     <h2>Artifacts</h2>
+    <div class="row" style="margin-bottom:14px">
+      <form method="post" action="/download">
+        <input type="hidden" name="paper" value="{{$.Input}}">
+        <input type="hidden" name="format" value="json">
+        <button type="submit">Download JSON</button>
+      </form>
+      <form method="post" action="/download">
+        <input type="hidden" name="paper" value="{{$.Input}}">
+        <input type="hidden" name="format" value="md">
+        <button class="btn secondary" type="submit">Download report (.md)</button>
+      </form>
+    </div>
     <details><summary>JSON artifact (DESi-canonical, replay-stable)</summary><pre>{{.JSON}}</pre></details>
     <details><summary>Markdown report</summary><pre>{{$.ReportMarkdown}}</pre></details>
   </div>

@@ -77,6 +77,7 @@ func (s *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", s.handleIndex)
 	mux.HandleFunc("/review", s.handleReview)
+	mux.HandleFunc("/download", s.handleDownload)
 	mux.HandleFunc("/healthz", s.handleHealthz)
 	return mux
 }
@@ -166,6 +167,47 @@ func (s *Server) handleReview(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	s.render(w, data)
+}
+
+// handleDownload re-runs the review on the submitted text (deterministic)
+// and returns the JSON artifact or Markdown report as a file download.
+func (s *Server) handleDownload(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+		return
+	}
+	r.Body = http.MaxBytesReader(w, r.Body, 8<<20)
+	if err := r.ParseForm(); err != nil {
+		http.Error(w, "invalid form", http.StatusBadRequest)
+		return
+	}
+	text := r.FormValue("paper")
+	format := r.FormValue("format")
+	if text == "" {
+		http.Error(w, "no paper text", http.StatusBadRequest)
+		return
+	}
+
+	ctx, cancel := s.ctx()
+	defer cancel()
+	res, err := s.pipeline.Review(ctx, text)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadGateway)
+		return
+	}
+
+	switch format {
+	case "json":
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Content-Disposition", `attachment; filename="review_output.json"`)
+		io.WriteString(w, res.JSON)
+	case "md":
+		w.Header().Set("Content-Type", "text/markdown; charset=utf-8")
+		w.Header().Set("Content-Disposition", `attachment; filename="review_report.md"`)
+		io.WriteString(w, review.RenderReport(res.Artifact))
+	default:
+		http.Error(w, "unknown format (want json or md)", http.StatusBadRequest)
+	}
 }
 
 func (s *Server) handleHealthz(w http.ResponseWriter, r *http.Request) {

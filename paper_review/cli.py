@@ -55,6 +55,11 @@ def _build_parser() -> argparse.ArgumentParser:
         "doctor", help="run environment / self checks"
     )
     p_doctor.add_argument("--config", help="path to a config .ini")
+    p_doctor.add_argument(
+        "--service-url",
+        help="probe the DESi governance microservice at this base URL "
+        "(localhost diagnostic for the Go web UI)",
+    )
 
     p_config = sub.add_parser(
         "config", help="print the resolved, secret-free configuration"
@@ -101,6 +106,38 @@ def _cmd_config(args: argparse.Namespace) -> int:
     # safe_dict contains NO secret - only the env-var name and a presence flag.
     sys.stdout.write(artifact_json(cfg.safe_dict()))
     return 0
+
+
+def _check_desi_service(url: str) -> tuple[bool, str]:
+    """Probe the DESi governance microservice at ``<url>/health``.
+
+    This is a localhost diagnostic for the Go web UI setup. It performs a
+    single GET to the given base URL and verifies the service reports the
+    real desi-governance library with ``core_identity == 1.0``.
+    """
+    import json as _json
+    import urllib.error
+    import urllib.request
+
+    endpoint = url.rstrip("/") + "/health"
+    try:
+        with urllib.request.urlopen(endpoint, timeout=5) as resp:
+            payload = _json.loads(resp.read().decode("utf-8"))
+    except (urllib.error.URLError, OSError, ValueError) as exc:
+        return False, f"DESi microservice unreachable at {endpoint}: {exc}"
+    if not payload.get("desi_available"):
+        return False, f"DESi microservice reports desi unavailable ({endpoint})"
+    identity = payload.get("core_identity")
+    if identity != 1.0:
+        return False, (
+            f"DESi microservice core_identity={identity!r} (expected 1.0)"
+        )
+    lib = payload.get("library", "?")
+    ver = payload.get("version", "?")
+    return True, (
+        f"DESi microservice healthy at {endpoint} "
+        f"({lib} {ver}, core_identity={identity})"
+    )
 
 
 def _cmd_doctor(args: argparse.Namespace) -> int:
@@ -154,6 +191,16 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
     except Exception as exc:  # pragma: no cover - defensive
         ok = False
         out.append(f"[FAIL] pipeline error: {exc}")
+
+    if getattr(args, "service_url", None):
+        svc_ok, svc_msg = _check_desi_service(args.service_url)
+        if svc_ok:
+            out.append(f"[ok] {svc_msg}")
+        else:
+            ok = False
+            out.append(f"[FAIL] {svc_msg}")
+    else:
+        out.append("[skip] DESi microservice check (pass --service-url to enable)")
 
     for line in out:
         sys.stdout.write(line + "\n")

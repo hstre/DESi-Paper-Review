@@ -48,6 +48,16 @@ def test_doctor_reports_ready(capsys):
     assert rc == 0
     last = out.strip().splitlines()[-1]
     assert last == "DESI_PAPER_REVIEW_MVP_READY"
+    # Without --service-url the microservice check is skipped, not failed.
+    assert "[skip] DESi microservice check" in out
+
+
+def test_doctor_service_check_fails_when_unreachable(capsys):
+    rc = main(["doctor", "--service-url", "http://127.0.0.1:59999"])
+    out = capsys.readouterr().out
+    assert rc == 1
+    assert out.strip().splitlines()[-1] == "DESI_PAPER_REVIEW_MVP_NOT_READY"
+    assert "DESi microservice unreachable" in out
 
 
 def test_config_command_emits_no_secret(capsys):
